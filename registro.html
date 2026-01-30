@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Empleado - StaffManager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0f172a] text-slate-200 min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-2xl bg-[#1e293b] shadow-2xl rounded-3xl overflow-hidden border border-slate-800">
+        <div class="p-8 md:p-12">
+            <div class="mb-10 text-center">
+                <a href="index.html"
+                    class="text-indigo-400 text-xs font-bold uppercase tracking-widest hover:text-indigo-300 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver al Dashboard
+                </a>
+                <h1 class="text-3xl font-black text-white mt-4 tracking-tight">Alta de Personal</h1>
+                <p class="text-slate-400 text-sm mt-2">Ingresa los detalles del nuevo integrante</p>
+            </div>
+
+            <form id="formEmpleado" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Nombre</label>
+                        <input type="text" id="nombre" required
+                            class="input-field w-full bg-[#0f172a] border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-600">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Apellido</label>
+                        <input type="text" id="apellido" required
+                            class="input-field w-full bg-[#0f172a] border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-600">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Correo
+                        Electrónico</label>
+                    <input type="email" id="correo" required
+                        class="input-field w-full bg-[#0f172a] border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-600">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Puesto</label>
+                        <select id="puesto"
+                            class="input-field w-full bg-[#0f172a] border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
+                            <option value="Desarrollador">Desarrollador</option>
+                            <option value="Gerente">Gerente</option>
+                            <option value="Diseñador">Diseñador</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Antigüedad
+                            (años)</label>
+                        <input type="number" id="antiguedad" required
+                            class="input-field w-full bg-[#0f172a] border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 outline-none">
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-black py-4 rounded-xl mt-6 shadow-xl shadow-indigo-500/20 transform active:scale-[0.98] transition-all uppercase tracking-widest">
+                    Registrar en la base de datos
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app2.js"></script>
+</body>
+
+</html>
